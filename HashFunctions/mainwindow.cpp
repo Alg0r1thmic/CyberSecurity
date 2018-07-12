@@ -5,7 +5,9 @@
 #include "sha256.h"
 #include "sha512.h"
 #include <string>
+#include <vector>
 #include <qdebug.h>
+#include "ripemd.h"
 using namespace std;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -77,4 +79,23 @@ void MainWindow::on_pushButton_4_clicked()
     QString resultshow=QString::fromStdString(result);
     ui->textEdit_8->setText(resultshow);
 
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    QString str;
+    str=ui->textEdit_9->toPlainText();
+
+    string input;
+    input=str.toStdString();
+
+    vector<unsigned char> text;
+    for (int i = 0; i < input.length(); ++i) {
+        text.push_back(input[i]);
+    }
+
+    string result=getHash(text);
+
+    QString resultShow=QString::fromStdString(result);
+    ui->textEdit_10->setText(resultShow);
 }

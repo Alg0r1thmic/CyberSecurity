@@ -36,7 +36,8 @@ HEADERS += \
     md5.h \
     sha1.h \
     sha256.h \
-    sha512.h
+    sha512.h \
+    ripemd.h
 
 FORMS += \
         mainwindow.ui

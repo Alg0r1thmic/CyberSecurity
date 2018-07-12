@@ -250,7 +250,8 @@ DIST          = ../../../Qt/5.11.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../HashFunctions/md5.h \
 		../HashFunctions/sha1.h \
 		../HashFunctions/sha256.h \
-		../HashFunctions/sha512.h ../HashFunctions/main.cpp \
+		../HashFunctions/sha512.h \
+		../HashFunctions/ripemd.h ../HashFunctions/main.cpp \
 		../HashFunctions/mainwindow.cpp \
 		../HashFunctions/md5.cpp \
 		../HashFunctions/sha1.cpp \
@@ -657,7 +658,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/5.11.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../HashFunctions/mainwindow.h ../HashFunctions/md5.h ../HashFunctions/sha1.h ../HashFunctions/sha256.h ../HashFunctions/sha512.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../HashFunctions/mainwindow.h ../HashFunctions/md5.h ../HashFunctions/sha1.h ../HashFunctions/sha256.h ../HashFunctions/sha512.h ../HashFunctions/ripemd.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../HashFunctions/main.cpp ../HashFunctions/mainwindow.cpp ../HashFunctions/md5.cpp ../HashFunctions/sha1.cpp ../HashFunctions/sha256.cpp ../HashFunctions/sha512.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../HashFunctions/mainwindow.ui $(DISTDIR)/
 

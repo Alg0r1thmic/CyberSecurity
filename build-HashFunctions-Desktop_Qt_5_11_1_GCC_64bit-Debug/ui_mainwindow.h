@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -51,6 +52,12 @@ public:
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QPushButton *pushButton;
+    QLabel *label_15;
+    QTextEdit *textEdit_9;
+    QTextEdit *textEdit_10;
+    QLabel *label_16;
+    QLabel *label_17;
+    QPushButton *pushButton_5;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -59,7 +66,10 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(845, 554);
+        MainWindow->resize(845, 604);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Im\303\241genes/shutterstock_609173918-800x450.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -137,6 +147,24 @@ public:
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(390, 110, 80, 16));
+        label_15 = new QLabel(centralWidget);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(110, 440, 121, 16));
+        textEdit_9 = new QTextEdit(centralWidget);
+        textEdit_9->setObjectName(QStringLiteral("textEdit_9"));
+        textEdit_9->setGeometry(QRect(110, 460, 651, 31));
+        textEdit_10 = new QTextEdit(centralWidget);
+        textEdit_10->setObjectName(QStringLiteral("textEdit_10"));
+        textEdit_10->setGeometry(QRect(110, 500, 651, 31));
+        label_16 = new QLabel(centralWidget);
+        label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setGeometry(QRect(40, 470, 49, 12));
+        label_17 = new QLabel(centralWidget);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setGeometry(QRect(40, 510, 49, 12));
+        pushButton_5 = new QPushButton(centralWidget);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(390, 490, 80, 16));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -174,6 +202,10 @@ public:
         pushButton_3->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_4->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        label_15->setText(QApplication::translate("MainWindow", "RIPEMD-160", nullptr));
+        label_16->setText(QApplication::translate("MainWindow", "PlainText", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "Hash", nullptr));
+        pushButton_5->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };
