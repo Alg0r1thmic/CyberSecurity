@@ -25,10 +25,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    md5.cpp \
+    sha1.cpp \
+    sha256.cpp \
+    sha512.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    md5.h \
+    sha1.h \
+    sha256.h \
+    sha512.h
 
 FORMS += \
         mainwindow.ui
